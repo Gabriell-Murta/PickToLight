@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Stronzo.PickToLight.Api.Borders\Stronzo.PickToLight.Api.Borders.csproj" />
+    <ProjectReference Include="..\Stronzo.PickToLight.Api.Shared\Stronzo.PickToLight.Api.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

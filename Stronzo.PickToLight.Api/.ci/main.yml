@@ -1,0 +1,68 @@
+trigger:
+  branches:
+    include:
+      - main
+
+stages:
+  - stage: "build"
+    displayName: "Build"
+    jobs:
+      - job: "build"
+        displayName: "Build"
+        pool:
+          name: Azure.Pool.Stronzo
+
+        steps:
+          - task: UseDotNet@2
+            displayName: "Use Dotnet 6.0.x"
+            inputs:
+              packageType: "sdk"
+              version: "6.0.x"
+
+          - task: DotNetCoreCLI@2
+            displayName: 'Dotnet Restore'
+            inputs:
+              command: 'restore'
+              projects: 'Stronzo.PickToLight.Api.sln'
+
+          - task: DotNetCoreCLI@2
+            displayName: 'Dotnet Build'
+            inputs:
+              command: 'custom'
+              custom: 'build'
+              projects: 'Stronzo.PickToLight.Api.sln'
+              arguments: '-c $(configuration) --no-restore'
+
+
+          - task: DotNetCoreCLI@2
+            displayName: "Dotnet Publish"
+            inputs:
+              command: "publish"
+              publishWebProjects: false
+              projects: "Stronzo.PickToLight.Api.sln"
+              arguments: '-c $(configuration) -o "$(Build.SourcesDirectory)/out" --no-build'
+              zipAfterPublish: false
+
+          - task: Docker@2
+            displayName: "Docker Build"
+            inputs:
+              containerRegistry: stronzoltda
+              repository: "stronzoltda/stronzo-picktolight-api"
+              command: build
+              arguments: '--build-arg PUBLISH_DIR="./out/s"'
+              tags: |
+                $(Build.BuildId)
+                latest
+
+          - task: Docker@2
+            displayName: "Docker Push Hub"
+            inputs:
+              containerRegistry: stronzoltda
+              repository: "stronzoltda/stronzo-picktolight-api"
+              command: push
+              tags: |
+                $(Build.BuildId)
+                latest
+
+          - task: PublishBuildArtifacts@1
+            displayName: "Publish Artifact: drop"

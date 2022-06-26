@@ -1,0 +1,45 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stronzo.PickToLight.Api", "Stronzo.PickToLight.Api\Stronzo.PickToLight.Api.csproj", "{5F6340CB-DBC0-4269-8B7E-C5EF8B149EC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stronzo.PickToLight.Api.Borders", "Stronzo.PickToLight.Api.Borders\Stronzo.PickToLight.Api.Borders.csproj", "{510CE4AC-8A9B-45A6-9FE1-48EC79DD2E31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stronzo.PickToLight.Api.Repositories", "Stronzo.PickToLight.Api.Repositories\Stronzo.PickToLight.Api.Repositories.csproj", "{09DF036B-F096-4EE8-8B5F-658B765A968A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stronzo.PickToLight.Api.Shared", "Stronzo.PickToLight.Api.Shared\Stronzo.PickToLight.Api.Shared.csproj", "{B944492C-8BD3-458E-B9B3-923EB61F5D47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stronzo.PickToLight.Api.UseCases", "Stronzo.PickToLight.Api.UseCases\Stronzo.PickToLight.Api.UseCases.csproj", "{94076972-914A-402D-938B-DF51003A56C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F6340CB-DBC0-4269-8B7E-C5EF8B149EC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F6340CB-DBC0-4269-8B7E-C5EF8B149EC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F6340CB-DBC0-4269-8B7E-C5EF8B149EC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F6340CB-DBC0-4269-8B7E-C5EF8B149EC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{510CE4AC-8A9B-45A6-9FE1-48EC79DD2E31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{510CE4AC-8A9B-45A6-9FE1-48EC79DD2E31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{510CE4AC-8A9B-45A6-9FE1-48EC79DD2E31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{510CE4AC-8A9B-45A6-9FE1-48EC79DD2E31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09DF036B-F096-4EE8-8B5F-658B765A968A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09DF036B-F096-4EE8-8B5F-658B765A968A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09DF036B-F096-4EE8-8B5F-658B765A968A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09DF036B-F096-4EE8-8B5F-658B765A968A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B944492C-8BD3-458E-B9B3-923EB61F5D47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B944492C-8BD3-458E-B9B3-923EB61F5D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B944492C-8BD3-458E-B9B3-923EB61F5D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B944492C-8BD3-458E-B9B3-923EB61F5D47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94076972-914A-402D-938B-DF51003A56C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94076972-914A-402D-938B-DF51003A56C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94076972-914A-402D-938B-DF51003A56C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94076972-914A-402D-938B-DF51003A56C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
